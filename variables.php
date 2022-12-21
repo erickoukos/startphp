@@ -51,7 +51,8 @@ echo "<br>";
 echo 10 / 2;
 // Constants - cannot be changed.
 echo "<br>";
-define('HOST', 'localhost');
-define('USER', 'root');
 
-var_dump(HOST);
+define("WEBSITE", "riconets.com");
+var_dump(WEBSITE);
+
+?>
