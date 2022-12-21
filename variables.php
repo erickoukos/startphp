@@ -26,18 +26,32 @@
 
 
 // Adding Strings to variables
+$name = "Amos Kiprotich";
+$age = 20;
+$height = "128cm";
 
+echo 'My name is ' . $name .',' . 'with ' . $height. ',' . 'I\'m ' .$age .'years old.';
 // Using Double Quotes
-
+echo "<br>";
+echo "My name is $name,with $height, I'm $age years old.";
 
 // Always do it this way
-
+echo "<br>";
+echo "My name is {$name}, with {$height}, I'm {$age} years old.";
 
 // Concatenate incase of single quotes using . 
 
-
+echo 'My name is ' . $name .',' . 'with ' . $height. ',' . 'I\'m ' .$age .'years old.';
 // Arithmetic operators + - / * %
-
-
+echo "<br>";
+echo 5+5;
+echo "<br>";
+echo 10%2; // Modulus
+echo "<br>";
+echo 10 / 2;
 // Constants - cannot be changed.
+echo "<br>";
+define('HOST', 'localhost');
+define('USER', 'root');
 
+var_dump(HOST);
