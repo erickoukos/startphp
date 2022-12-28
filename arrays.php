@@ -146,6 +146,219 @@ $kelcy = [
 send to my email -  erick@riconets.com
  */
 
+ echo "<br>";
+ echo "######################### <br>";
+$kelcy = [
+  $name = 'Kelcy',
+  $age = '20',
+  $height = '126' 
+];
+echo"<br>";
+print_r($kelcy);
+echo"<br>";
+echo "My name is $kelcy[0], I'm $kelcy[1]years old and $kelcy[2]cm tall";
+
+echo "<br>";
+echo "######################### <br>";
+
+
+/*
+$book = [
+  $Detail = ["Publisher" => "Little Brown"],
+  ["Title" => "The Double Sword"],
+  ["Author" => "Robert Jenk"]
+   
+  ];
+  */
+
+  function toDecode($value, $key){
+    echo "$key : $value"."\n";
+  }
+
+  $book = '{"Title": "The Double Sword",
+    "Author": "Robert Jenk",
+    "Detail": {
+      "Publisher": "Little Brown"
+    }}';
+
+    $b = json_decode($book, true);
+    array_walk_recursive($b, "toDecode");
+  
+  // echo"<br>";
+  // var_dump($book);
+  
+  // echo"<br>";
+  // var_dump(json_encode($book));
+  
+ 
+  // ARRAY FUNCTIONS
+  echo "<br>";
+  echo "######################### <br>";
+
+  $fruits = array('apple', 'banana', 'orange', 'grape');
+
+  // Get the array length
+  echo count($fruits);
+  
+  echo "<br>";
+  echo "######################### <br>";
+
+  // Search array
+
+  echo in_array('banana', $fruits);
+
+  echo "<br>";
+  echo "######################### <br>";
+
+  // Adding elements into an array
+
+array_push($fruits, 'mango', 'pepper');
+
+var_dump($fruits);
+
+
+// Adding an element at the beginning
+
+echo "<br>";
+echo "######################### <br>";
+
+array_unshift($fruits, 'kiwi');
+var_dump($fruits);
+
+// Remove an element in an array
+
+echo "<br>";
+echo "######################### <br>";
+
+array_pop($fruits); //Removes the last element
+var_dump($fruits);
+
+echo "<br>";
+echo "######################### <br>";
+
+array_shift($fruits); //Removes the first element
+print_r($fruits);
+
+echo "<br>";
+echo "######################### <br>";
+
+
+// Remove a specific element in an array
+unset($fruits[3]);
+print_r($fruits);
+
+
+echo "<br>";
+echo "######################### <br>";
+
+// Split into chunks of 2
+$chunkedArray = array_chunk($fruits, 2);
+print_r($chunkedArray);
+
+echo "<br>";
+echo "###########CONCATENATE############## <br>";
+
+
+// Concatenate arrays
+
+$arr1 = array(1, 2, 3);
+$arr2 = array(4, 5, 6);
+$arr3 = array_merge($arr1, $arr2);
+print_r($arr3);
+
+// using spread
+
+echo "<br>";
+echo "###########SPREAD############## <br>";
+
+$arr4 = [...$arr1, ...$arr2];
+print_r($arr4);
+
+
+// Combine Keys and Values
+echo "<br>";
+echo "############KEYS & VALUES############# <br>";
+
+$n = ['Green', 'Red', 'Yellow'];
+$m = ['Raw Pepper', 'Apple', 'Banana'];
+$k = array_combine($n, $m);
+print_r($k);
+
+echo "<br>";
+echo "############KEYS############# <br>";
+$keys = array_keys($k);
+print_r($keys);
+
+
+echo "<br>";
+echo "############FLIP KEYS WITH VALUES############# <br>";
+
+$flipped = array_flip($k);
+print_r($flipped);
+
+
+echo "<br>";
+echo "############ARRAY WITH A RANGE############# <br>";
+
+$newNumbers = range(1, 20);
+print_r($newNumbers);
+
+echo "<br>";
+echo "###########MAPPING############## <br>";
+
+
+$mappedNumbers = array_map(function($number){
+  return "Number {$number}";
+}, $newNumbers);
+
+print_r($mappedNumbers);
+
+
+echo "<br>";
+echo "###########FILTER AN ARRAY############## <br>";
+
+$lessThan10 = array_filter($newNumbers, fn($number) => $number < 10);
+
+print_r($lessThan10);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
