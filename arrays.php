@@ -322,6 +322,68 @@ $lessThan10 = array_filter($newNumbers, fn($number) => $number < 10);
 print_r($lessThan10);
 
 
+echo "<br>";
+echo "###########CHANGE KEY CASE############## <br>";
+
+$seasons = array('summer' => '1000', 'winter' => '2000', 'spring' => '3000', 'autumn' => '4000');
+
+print_r(array_change_key_case($season, CASE_UPPER));
+
+
+echo "<br>";
+echo "###########COUNT############## <br>";
+
+echo count($seasons);
+
+echo "<br>";
+echo "###########SORTING ARRAYS############## <br>";
+
+$days = array('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday');
+sort($days);
+
+
+foreach($days as $day){
+  echo "$day<br>";
+}
+
+echo "<br>";
+echo "###########REVERSE ARRAYS############## <br>";
+
+$reversedDays = array_reverse($days);
+
+foreach($reversedDays as $reversedDay){
+  print_r($reversedDay . "<br>");
+}
+
+echo "<br>";
+echo "###########SEARCH ARRAYS############## <br>";
+
+// searches for a specified value in an array, and returns the key if the search is successful 
+
+$animals = array('cat', 'dog', 'goat', 'rat');
+$key = array_search('dog', $animals);
+echo $key;
+
+
+echo "<br>";
+echo "###########INTERSECT ARRAYS############## <br>";
+
+$team1 = array('John', 'Janet', 'Joseph', 'Val');
+$team2 = array('James', 'Val', 'Linet', 'John');
+
+$intersectedArrays = array_intersect($team1, $team2);
+
+foreach($intersectedArrays as $intersectedArray){
+  echo "$intersectedArray<br>";
+}
+
+
+
+
+
+
+
+
 
 
 
