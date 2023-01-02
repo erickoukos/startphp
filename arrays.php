@@ -327,7 +327,7 @@ echo "###########CHANGE KEY CASE############## <br>";
 
 $seasons = array('summer' => '1000', 'winter' => '2000', 'spring' => '3000', 'autumn' => '4000');
 
-print_r(array_change_key_case($season, CASE_UPPER));
+print_r(array_change_key_case($seasons, CASE_UPPER));
 
 
 echo "<br>";
