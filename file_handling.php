@@ -1,11 +1,47 @@
 <?php
-
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 /* ---------- File Handling --------- */
 
 /* 
   File handling is the ability to read and write files on the server.
   PHP has built in functions for reading and writing files.
 */
+
+$file = 'resources/class.txt';
+
+if (file_exists($file)) {
+    // Returns content and number of bytes read from the on success, or FALSE on failure
+    // echo readfile($file);
+}
+
+// File Open, Read, Write, Close
+if(file_exists($file)){
+    // fopen() gives more control on the file
+    // Modes: r, w, a, x, r+, w+, x+
+    $handle = fopen($file,'r');
+    // fread() reads content of a file as a string
+    $content = fread($handle, filesize($file));
+    // fclose() closes the file resource on success
+    fclose($handle);
+    echo $content;
+} else {
+    // Create the file
+    $handle = fopen($file, 'w');
+    // PHP_EOL - End of Line
+    $content = 'Brenda' . PHP_EOL . 'Moreen' . PHP_EOL . 'Sam' . PHP_EOL . 'Sharon';
+    // fwrite() - writes content to the file and return the number of bytes written on success
+    fwrite($handle, $content);
+    fclose($handle);
+
+
+}
+
+
+
+
+
 
 
 /*
